@@ -4,17 +4,13 @@
 import sys
 from operator import itemgetter
 
-
-with open("test.txt", "r") as f:  
-    data = f.read()
-#print(data)
-   
 dict_vtime_count = {}
 
-for line in data:
+for line in sys.stdin:
     line = line.strip()
-    print(line)
-    vtime, count = line.split()
+    line = line.split()
+    vtime=line[0]
+    count=line[-1]
     try:
         count = int(count)
         dict_vtime_count[vtime] = dict_vtime_count.get(vtime, 0) + count
