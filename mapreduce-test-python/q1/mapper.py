@@ -7,9 +7,7 @@ Created on Sun Oct 25 01:11:34 2020
 import re
 import sys
 
-f = open('test.csv','r',encoding='utf-8')
-
-for line in f:
+for line in sys.stdin:
     line = line.strip()
     vtime = line.split(",")[19]
     
